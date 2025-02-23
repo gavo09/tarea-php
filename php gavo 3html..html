@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con dos números</title>
+</head>
+<body>
+    <h1>Operaciones con dos números</h1>
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1">
+    <br>
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2">
+    <br>
+    <button onclick="calcularOperaciones()">Calcular</button>
+    <p id="resultadoOperaciones"></p>
+
+    <script>
+        function calcularOperaciones() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const suma = num1 + num2;
+            const resta = num1 - num2;
+            const multiplicacion = num1 * num2;
+            const division = num1 / num2;
+            const residuo = num1 % num2;
+
+            document.getElementById('resultadoOperaciones').innerText = 
+                `Suma: ${suma}, Resta: ${resta}, Multiplicación: ${multiplicacion}, División: ${division}, Residuo: ${residuo}`;
+        }
+    </script>
+</body>
+</html>
